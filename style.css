@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  cursor: none;
+}
+.nav-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+}
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hover-this {
+  transition: all 200ms ease;
+}
+a {
+  cursor: none;
+}
+span {
+  display: inline-block;
+  font-family: "Monument Extended";
+  font-weight: 300;
+  font-size: 36px;
+  color: #ffffff;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: transform 100ms linear;
+}
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.3rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 300ms ease;
+}
+.hover-this:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(8);
+}
+
+@media (max-width: 900px) {
+  span {
+    font-size: 13px;
+  }
+
+  .cursor {
+    display: none;
+  }
+}
