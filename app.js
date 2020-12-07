@@ -1,9 +1,9 @@
 (function () {
   const link = document.querySelectorAll("nav > .hover-this");
   const cursor = document.querySelector(".cursor");
-  const animate = (e) => {
-    const span = document.querySelector("span");
-    const { offSetX: x, offSetY: y } = e,
+  const animate = function (e) {
+    const span = this.querySelector("span");
+    const { offsetX: x, offsetY: y } = e,
       { offsetWidth: width, offsetHeight: height } = this,
       move = 25,
       xMove = (x / width) * (move * 2) - move,
@@ -11,7 +11,7 @@
     span.style.transform = `translate(${xMove}px,${yMove}px)`;
     if (e.type === "mouseleave") span.style.transform = ``;
   };
-  const editCursor = (e) => {
+  const editCursor = function (e) {
     const { clientX: x, clientY: y } = e;
     cursor.style.left = `${x}px`;
     cursor.style.top = `${y}px`;
