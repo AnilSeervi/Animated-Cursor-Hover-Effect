@@ -19,14 +19,14 @@ nav {
   align-items: center;
 }
 .hover-this {
-  transition: all 200ms ease;
+  transition: transform 200ms ease;
 }
 a {
   cursor: none;
 }
 span {
   display: inline-block;
-  font-family: "Monument Extended";
+  font-family: Dreadnoughtus, sans-serif;
   font-weight: 300;
   font-size: 36px;
   color: #ffffff;
@@ -37,7 +37,7 @@ span {
 .cursor {
   pointer-events: none;
   position: fixed;
-  padding: 0.3rem;
+  padding: 0.32rem;
   background-color: #ffffff;
   border-radius: 50%;
   mix-blend-mode: difference;
@@ -46,7 +46,9 @@ span {
 .hover-this:hover ~ .cursor {
   transform: translate(-50%, -50%) scale(8);
 }
-
+.hover-this:hover {
+  transform: scale(1.125);
+}
 @media (max-width: 900px) {
   span {
     font-size: 13px;

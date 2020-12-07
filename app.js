@@ -5,7 +5,7 @@
     const span = this.querySelector("span");
     const { offsetX: x, offsetY: y } = e,
       { offsetWidth: width, offsetHeight: height } = this,
-      move = 25,
+      move = 20,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
     span.style.transform = `translate(${xMove}px,${yMove}px)`;
